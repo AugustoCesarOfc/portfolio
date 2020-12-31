@@ -202,7 +202,7 @@ header {
     font-family: var(--font-action);
     font-size: 2rem;
     color: #555;
-    transition: color .5s;
+    transition: color .2s;
 }
 
 .menu-link:hover{
@@ -320,4 +320,228 @@ header {
 .conhecimentos-img-wrapper img {
     object-fit: cover;
     width: 100%;
+}
+
+.projetos {
+    display: flex;
+    justify-content: space-evenly;    
+    margin-bottom: 4rem;
+}
+
+.card {
+    width: 18rem;
+    height: 25rem;
+    position: relative;
+}
+
+.card-img-wrapper {
+    width: 100%;
+    height: 100%;
+    background-color: #262626;
+    border-radius: .5rem;
+}
+
+.card-img-wrapper img {
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+    border-radius: .5rem;
+    opacity: .8;
+    transition: opacity .3s;
+}
+
+.card:hover .card-img-wrapper img {
+    opacity: .4;
+}
+
+.card-info {
+    position: absolute;
+    bottom: 0;
+    opacity: 0;
+    visibility: hidden;
+    padding: 2rem;
+    text-shadow: 0 0.1rem 0.3rem rgba(0, 0, 0, 0.4);
+    transition: all .5s;
+}
+
+.card-info h2 {
+    font-family: var(--font-primary);
+    font-size: 2rem;
+    font-weight: 500;
+    color: #eee;
+}
+
+.card-info h3 {
+    font-family: var(--font-action);
+    font-weight: bolder;
+    text-transform: uppercase;    
+    color: #ff4081;
+    margin-bottom: 1.5rem;
+}
+
+.card-info p {
+    font-family: var(--font-secundary);
+    font-weight: 400;
+    color: #eee;
+    width: 80%;
+    margin-bottom: 2rem;
+}
+
+.btn {
+    font-family: var(--font-action);
+    font-size: 1rem;
+    color: #eee;
+    background: #6a3093;
+    background: -webkit-linear-gradient(to right, #5b2781, #a044ff); 
+    background: linear-gradient(to right,  #6a3093, #a044ff);
+    box-shadow: 0 .1rem .8rem rgba(0, 0, 0, .4);
+    border-radius: .5rem;
+    border: none;
+    cursor: pointer;
+}
+
+.card-info button {
+    width: 8rem;
+    height: 2.5rem;    
+}
+
+.card:hover .card-info {    
+    bottom: 3rem;
+    opacity: 1;
+    visibility: visible;
+}
+
+.sessao-contato {
+    width: 100%;
+    height: 100vh;
+    background-color: #272727;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.contato-wrapper {
+    width: 60%;
+    height: 30rem;
+    display: flex;
+    box-shadow: 0 2rem 3rem rgba(0, 0, 0, .5);
+}
+
+.contato-left {
+    width: 35%;
+    background: 
+        linear-gradient(rgba(15, 15, 15, 0.6), rgba(22, 22, 22, 0.9)), 
+        url(img/contato.jpg);
+    background-size: cover;
+}
+
+.contato-right {
+    width: 65%;
+    background-color: #eee;
+    padding: 1rem 3rem 3rem 3rem;
+}
+
+.sessao-contato h1 {
+    font-family: var(--font-primary);
+    width: 100%;
+    font-size: 3rem;
+    text-align: center;
+    color: #272727;
+    font-weight: lighter;
+}
+
+.sessao-contato form {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.input-group {
+    position: relative;
+}
+
+.field {
+    background: transparent;
+    border: none;
+    width: 20rem;
+    font-size: 1.5rem;
+    font-family: var(--font-secundary);
+    border-bottom: 2px dashed #636363;
+    height: 3rem;
+    outline: none;
+    margin: 1rem 0;
+}
+
+.input-group textarea {
+    padding-top: 1rem;
+    max-width: 20rem;
+    max-height: 7rem;
+}
+
+.field-label {
+    position: absolute;
+    left: 0;
+    /* top: 2rem; */
+    font-size: 1.2rem;
+    font-family: var(--font-secundary);
+    text-transform: uppercase;
+    transition: all .3s;
+}
+
+
+.field:focus ~ label {
+    top: 0;
+    font-size: 1rem;
+}
+
+.field:focus ~ label{
+    color:#0f0;
+}
+
+.field:focus {
+    border-bottom: 1px solid;
+}
+
+
+.btn-submit {
+    font-size: 1.2rem;
+    text-transform: uppercase;
+    width: 100%;
+    height: 2rem;
+}
+
+.sessao-orcamento {
+    width: 100%;
+    height: 100vh;
+    background: url(img/bg-orcamento.jpg);
+    object-fit: cover;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.orcamento-wrapper {
+    width: 60%;
+    height: 80%;
+    background-color: #fff9;
+    border-radius: 10px;
+    box-shadow: 0 0.4rem 0.4rem rgba(0, 0, 0, .8);
+    position: relative;
+}
+
+.sessao-orcamento h1 {
+    position: absolute;
+    top: -2.5rem;
+    left: 2rem;
+    background: #6a3093;
+    background: -webkit-linear-gradient(to right, #5b2781, #a044ff); 
+    background: linear-gradient(to right,  #6a3093, #a044ff);
+    padding: 0 3rem;
+    color: #fff;
+    font-family: var(--font-primary);
+    font-size: 3rem;
+    font-weight: lighter;
+    box-shadow: 0 0.4rem 0.4rem rgba(0, 0, 0, .8);
+    border-radius: 10px;
 }
